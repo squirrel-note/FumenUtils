@@ -32,7 +32,7 @@ public class EntryPoint {
         "move",
         "pcable",
         "reduce",
-        "seq",
+        "sequence",
         "substractpieces"
     );
 
@@ -62,6 +62,10 @@ public class EntryPoint {
             case "piece":
             case "gp":
                 command = "getpiece";
+                break;
+
+            case "seq":
+                command = "sequence";
                 break;
 
             case "sup":
@@ -123,7 +127,7 @@ public class EntryPoint {
                 entryPoint = new MoveEntryPoint(argsList);
                 break;
 
-            case "seq":
+            case "sequence":
                 entryPoint = new SequenceEntryPoint(argsList);
                 break;
             case "substractpieces":
