@@ -28,7 +28,7 @@ public class HoleSettingParser {
         else if (cl.hasOption("tp")) fumens = URL.toCode(Input.inputAll(cl.getOptionValue("tp")));
         else throw new ParseException(Parameter.FUMEN);
 
-        String outpath = cl.getOptionValue("o", "output/getpiece.txt");
+        String outpath = cl.getOptionValue("o", "output/hole.txt");
 
         return new HoleParameters(fumens, outpath);
     }

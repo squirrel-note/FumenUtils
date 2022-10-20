@@ -27,7 +27,7 @@ public class SequenceSettingParser {
         else if (cl.hasOption("pp")) seqs = Input.inputAll(cl.getOptionValue("pp"));
         else throw new ParseException(Parameter.SEQ);
 
-        String outpath = cl.getOptionValue("o", "output/move.csv");
+        String outpath = cl.getOptionValue("o", "output/sequence.txt");
 
         return new SequenceParameters(seqs, outpath);
     }
