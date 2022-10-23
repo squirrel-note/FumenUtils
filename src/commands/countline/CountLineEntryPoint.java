@@ -35,6 +35,6 @@ public class CountLineEntryPoint implements EntryPoint {
 
     @Override
     public String getName() throws Exception {
-        return "clearline";
+        return "countline";
     }
 }
