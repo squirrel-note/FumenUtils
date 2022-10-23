@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import commands.clearcomment.ClearCommentEntryPoint;
-import commands.clearline.ClearLineEntryPoint;
 import commands.concat.ConcatEntryPoint;
+import commands.countline.CountLineEntryPoint;
 import commands.dry.DryEntryPoint;
 import commands.getpiece.GetPieceEntryPoint;
 import commands.getpiececode.GetPieceCodeEntryPoint;
@@ -24,6 +24,7 @@ public class EntryPoint {
         "clearcomment",
         "clearline",
         "concat",
+        "countline",
         "dry",
         "getpiece",
         "getpiececode",
@@ -50,7 +51,7 @@ public class EntryPoint {
                 break;
 
             case "cl":
-                command = "clearline";
+                command = "countline";
                 break;
 
             case "gpc":
@@ -93,8 +94,8 @@ public class EntryPoint {
             case "clearcomment":
                 entryPoint = new ClearCommentEntryPoint(argsList);
                 break;
-            case "clearline":
-                entryPoint = new ClearLineEntryPoint(argsList);
+            case "countline":
+                entryPoint = new CountLineEntryPoint(argsList);
                 break;
             case "dry":
                 entryPoint = new DryEntryPoint(argsList);

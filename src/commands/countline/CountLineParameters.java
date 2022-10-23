@@ -1,8 +1,8 @@
-package commands.clearline;
+package commands.countline;
 
 import java.util.List;
 
-public record ClearLineParameters(
+public record CountLineParameters(
     List<String> fumens,
     boolean allPage,
     String outpath

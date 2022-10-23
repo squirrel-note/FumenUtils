@@ -1,4 +1,4 @@
-package commands.clearline;
+package commands.countline;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,10 +15,10 @@ import commands.common.OptionBuilder;
 import exceptions.ParseException;
 import exceptions.ParseException.Parameter;
 
-public class ClearLineSettingParser {
+public class CountLineSettingParser {
     private static final Options OPTIONS = getOptions();
 
-    public static ClearLineParameters parse(List<String> args) throws Exception {
+    public static CountLineParameters parse(List<String> args) throws Exception {
         CommandLine cl = new DefaultParser().parse(OPTIONS, args.toArray(new String[args.size()]));
 
         if (cl.hasOption("help")) Helper.displayHelp(OPTIONS);
@@ -32,7 +32,7 @@ public class ClearLineSettingParser {
 
         String outpath = cl.getOptionValue("o", "output/clearline.txt");
 
-        return new ClearLineParameters(fumens, allPage, outpath);
+        return new CountLineParameters(fumens, allPage, outpath);
     }
 
     private static Options getOptions() {

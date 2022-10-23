@@ -1,4 +1,4 @@
-package commands.clearline;
+package commands.countline;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,11 +9,11 @@ import base.v115.PageFumen;
 import commands.common.EntryPoint;
 import commands.common.Output;
 
-public class ClearLineEntryPoint implements EntryPoint {
-    private final ClearLineParameters parameters;
+public class CountLineEntryPoint implements EntryPoint {
+    private final CountLineParameters parameters;
 
-    public ClearLineEntryPoint(List<String> args) throws Exception {
-        parameters = ClearLineSettingParser.parse(args);
+    public CountLineEntryPoint(List<String> args) throws Exception {
+        parameters = CountLineSettingParser.parse(args);
     }
 
     @Override
