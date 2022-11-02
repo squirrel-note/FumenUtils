@@ -19,7 +19,7 @@ public class SequenceEntryPoint implements EntryPoint {
     public void run() throws Exception {
         List<String> output = new ArrayList<>();
         for (String seq : parameters.seqs()) {
-            if (seq.matches(Constants.SEQREGEX)) {
+            if (seq.toUpperCase().matches(Constants.SEQREGEX)) {
                 for (String result : SequenceParser.parseNoDuplication(seq)) output.add(result);
             } else {
                 output.add("");

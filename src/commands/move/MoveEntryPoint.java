@@ -35,7 +35,7 @@ public class MoveEntryPoint implements EntryPoint {
 
         if (parameters.combination()) {
             for (String v115 : t) if (v115.matches(Constants.FUMENREGEX)) {
-                for (String seq : p) if (seq.matches(Constants.SEQREGEX)) {
+                for (String seq : p) if (seq.toUpperCase().matches(Constants.SEQREGEX)) {
                     output.add("");
                     for (Pair<String,List<PieceFumen>> result : Move.main(v115, seq, h)) for (PieceFumen fumen : result.right()) output.add(buildRow(fumen, result.left()));
                 }
@@ -43,7 +43,7 @@ public class MoveEntryPoint implements EntryPoint {
         } else {
             if (t.size() != p.size()) throw new IllegalArgumentException("Invailed argument. -t and -p should have same size.");
             
-            for (int i = 0; i < t.size(); i++) if (t.get(i).matches(Constants.FUMENREGEX) && p.get(i).matches(Constants.SEQREGEX)) {
+            for (int i = 0; i < t.size(); i++) if (t.get(i).matches(Constants.FUMENREGEX) && p.get(i).toUpperCase().matches(Constants.SEQREGEX)) {
                 output.add("");
                 for (Pair<String,List<PieceFumen>> result : Move.main(t.get(i), p.get(i), h)) for (PieceFumen fumen : result.right()) output.add(buildRow(fumen, result.left()));
             }

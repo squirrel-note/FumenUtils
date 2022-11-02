@@ -3,7 +3,7 @@ package base;
 public class Constants {
     public static final String FUMENREGEX = "v115@[A-Za-z0-9+/?]+";
 
-    public static final String SEQREGEX = "[TILJSZOtiljszo*\\[\\]\\^P0-9!,\\(\\):_\\{\\}|+]+";
+    public static final String SEQREGEX = "[TILJSZO*\\[\\]\\^P0-9!,\\(\\):_\\{\\}|+]+";
 
     public static final int[][][] PIECE_SHAPE = {
         {
