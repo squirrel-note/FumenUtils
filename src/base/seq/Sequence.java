@@ -124,7 +124,7 @@ class Sequence implements SeqPart {
                     i += 1;
                 } else switch (p.charAt(i + 1)) {
                     case 'P':
-                        q.add(new SeqPartPermutation("TILJSZO", Integer.parseInt(p.substring(e + 2, e + 3))));
+                        q.add(new SeqPartPermutation("TILJSZO", Integer.parseInt(p.substring(i + 2, i + 3))));
                         i += 3;
                         break;
                     case '!':
