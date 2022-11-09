@@ -31,7 +31,7 @@ class Sequence implements SeqPart {
                         i = k + 1;
                         break;
                     case '!':
-                        q.add(new SeqPartPermutation(p.substring(i + 1, e), e - i - 1));
+                        q.add(new SeqPartFactorial(p.substring(i + 1, e)));
                         i = e + 2;
                         break;
                     default:

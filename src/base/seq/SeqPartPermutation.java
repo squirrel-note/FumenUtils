@@ -11,15 +11,15 @@ class SeqPartPermutation implements SeqPart {
 
     SeqPartPermutation(String p, int d) throws Exception {
         p = p.replace(",", "");
-        if (d > p.length()) throw new SequenceException();
         if (!p.matches("[TILJSZO]+")) {
-            if (p.charAt(0) != '^') throw new Exception();
+            if (p.charAt(0) != '^') throw new SequenceException();
             for (char ch : "TILJSZO".toCharArray()) {
                 if (p.indexOf(ch) < 0) q += ch;
             }
         } else {
             q = p;
         }
+        if (d > q.length()) throw new SequenceException();
         c = d;
     }
 
